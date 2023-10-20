@@ -12,7 +12,7 @@ class LoginController extends Controller
      */
     public function index()
     {
-        //
+        return view('site.login.index');
     }
 
     /**
@@ -20,7 +20,7 @@ class LoginController extends Controller
      */
     public function create()
     {
-        //
+        return view('site.login.cadastrar');
     }
 
     /**

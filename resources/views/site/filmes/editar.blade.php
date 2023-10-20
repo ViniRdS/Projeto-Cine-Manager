@@ -1,7 +1,7 @@
 @extends('tema.site.index')
 
-@section('titulo','')
+@section('titulo','Editar Filme')
 
 @section('conteudo')
-    
+    <h1>Editar Filmes</h1>
 @endsection

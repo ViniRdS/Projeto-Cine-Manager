@@ -14,11 +14,12 @@ return new class extends Migration
         Schema::create('filmes', function (Blueprint $table) {
             $table->id();
             $table->string('titulo');
+            $table->string('imagem');
             $table->text('descricao');
             $table->time('duracao');
-            $table->string('genero');
+            $table->string('genero');//Fazer tabela a parte e usar id_genero? Ou usar um enum com todos os generos?
             $table->string('diretor');
-            $table->enum('status', ['em breve', 'em cartaz'])->default('em breve');
+            $table->enum('status', ['0', '1'])->default('0');
             $table->timestamps();
         });
     }
