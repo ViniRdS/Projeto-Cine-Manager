@@ -28,8 +28,31 @@ class FilmeController extends Controller
      */
     public function store(Request $request)
     {
-        //
+        // Validação dos dados
+        $validatedData = $request->validate([
+            'titulo' => 'required|string|max:255',
+            'imagem' => 'nullable|image|mimes:jpeg,png,jpg,gif,svg|max:2048', 
+            'descricao' => 'required|string',
+            'duracao' => ['required', 'regex:/^([0-1][0-9]|2[0-3]):[0-5][0-9]$/'],
+            'genero' => 'required|string|max:255',
+            'diretor' => 'required|string|max:255',
+            'status' => 'required|in:0,1',
+        ]);
+    
+        // Manipulação da imagem, se presente
+        if ($request->hasFile('imagem')) {
+            $imageName = time() . '.' . $request->imagem->extension();  
+            $request->imagem->move(public_path('img'), $imageName);
+            $validatedData['imagem'] = $imageName; // Altera a chave 'imagem' para o nome do arquivo
+        }
+    
+        // Cria o filme com os dados validados
+        Filme::create($validatedData);
+    
+        // Redireciona para a lista de filmes com uma mensagem de sucesso
+        return redirect()->route('filmes.listar')->with('success', 'Filme cadastrado com sucesso!');
     }
+    
 
     /**
      * Display the specified resource.
