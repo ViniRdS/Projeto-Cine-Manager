@@ -6,7 +6,7 @@
     <h1>Cadastrar Filmes</h1>
 
     <form action="{{ route('filmes.salvar') }}" method="post" enctype="multipart/form-data">
-        @csrf
+        
 
         <div class="form-group">
             <label for="titulo">Título</label>
@@ -60,6 +60,7 @@
         <input type="hidden" name="status" value="1">
 
         <button type="submit" class="btn btn-primary">Cadastrar</button>
+        {{ csrf_field() }}
     </form>
 
 @endsection
