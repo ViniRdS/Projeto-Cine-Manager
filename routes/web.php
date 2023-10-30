@@ -13,7 +13,7 @@ Route::get('/filmes/novo', [FilmeController::class, 'create'])->name('filmes.cad
 Route::post('/filmes/novo', [FilmeController::class, 'store'])->name('filmes.salvar');
 //Editar
 Route::get('/filmes/edita/{id}', [FilmeController::class, 'edit'])->name('filmes.editar');
-Route::put('/filmes/edita/{id}', [FilmeController::class, 'update'])->name('filmes.editar');
+Route::put('/filmes/edita/{id}', [FilmeController::class, 'update'])->name('filmes.atualizar');
 //Visualizar
 Route::get('/filmes/ver/{id}', [FilmeController::class, 'show'])->name('filmes.visualizar');
 //Remover

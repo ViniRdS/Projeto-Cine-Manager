@@ -17,7 +17,7 @@ return new class extends Migration
             $table->string('imagem');
             $table->text('descricao');
             $table->time('duracao');
-            $table->string('genero');//Fazer tabela a parte e usar id_genero? Ou usar um enum com todos os generos?
+            $table->string('genero');
             $table->string('diretor');
             $table->enum('status', ['0', '1'])->default('0');
             $table->timestamps();

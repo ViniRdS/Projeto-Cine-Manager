@@ -61,11 +61,11 @@
             <div>
                 <div class="form-check form-check-inline">
                     <input class="form-check-input" type="radio" name="status" id="status_ativo" value="1" {{ old('status') == '1' ? 'checked' : '' }}>
-                    <label class="form-check-label" for="status_ativo">Ativo</label>
+                    <label class="form-check-label" for="status_ativo">Em cartaz</label>
                 </div>
                 <div class="form-check form-check-inline">
                     <input class="form-check-input" type="radio" name="status" id="status_inativo" value="0" {{ old('status') == '0' ? 'checked' : '' }}>
-                    <label class="form-check-label" for="status_inativo">Inativo</label>
+                    <label class="form-check-label" for="status_inativo">Em Breve</label>
                 </div>
             </div>
             @error('status')

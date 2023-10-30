@@ -12,7 +12,8 @@ class FilmeController extends Controller
      */
     public function index()
     {
-        return view('site.filmes.index');
+        $reg=Filme::all();
+        return view('site.filmes.index', compact('reg'));
     }
 
     /**
