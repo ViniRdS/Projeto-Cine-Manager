@@ -6,7 +6,7 @@
     <h1>Cadastrar Filmes</h1>
 
     <form action="{{ route('filmes.salvar') }}" method="post" enctype="multipart/form-data">
-        @csrf
+        
 
         <div class="form-group">
             <label for="titulo">Título</label>
@@ -18,9 +18,10 @@
 
         <div class="form-group">
             <label for="imagem">Imagem</label>
-            <input type="file" name="imagem" id="imagem" class="form-control">
+            <input type="file" name="imagem" id="imagem" class="form-control" required>
             @error('imagem')
-                <span class="text-danger">{{ $message }}</span>
+            <span class="text-danger">{{ $message }}</span>
+           {{-- <span class="text-danger">Por favor, selecione uma imagem válida.</span>  --}}      
             @enderror
         </div>
 
@@ -74,6 +75,7 @@
         </div>
 
         <button type="submit" class="btn btn-primary">Cadastrar</button>
+        {{ csrf_field() }}
     </form>
 
 @endsection

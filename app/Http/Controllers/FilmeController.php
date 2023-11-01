@@ -32,7 +32,7 @@ class FilmeController extends Controller
         // Validação dos dados
         $validatedData = $request->validate([
             'titulo' => 'required|string|max:255',
-            'imagem' => 'nullable|image|mimes:jpeg,png,jpg,gif,svg|max:2048', 
+            'imagem' => 'required|image|mimes:jpeg,png,jpg,gif,svg|max:2048',
             'descricao' => 'required|string',
             'duracao' => ['required', 'regex:/^([0-1][0-9]|2[0-3]):[0-5][0-9]$/'],
             'genero' => 'required|string|max:255',

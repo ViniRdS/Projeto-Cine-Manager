@@ -14,6 +14,7 @@
             <thead>
                 <tr>
                     <th>ID</th>
+                    <th>Imagem</th>
                     <th>Título</th>
                     <th>Duração</th>
                     <th>Status</th>
@@ -24,6 +25,10 @@
                 @foreach ($reg as $filme)
                     <tr>
                         <td>{{$filme->id}}</td>
+                        <td>
+                            <!-- Adicionado para exibir a imagem -->
+                            <img src="{{ asset('img/' . $filme->imagem) }}" alt="{{ $filme->titulo }}" width="108" height="192"> 
+                        </td>
                         <td>{{$filme->titulo}}</td>
                         <td>{{$filme->duracao}}</td>
                         <td>{{(isset($filme->status) AND $filme->status)? 'Em Cartaz':'Em Breve'}}</td>
