@@ -13,7 +13,7 @@
         <table>
             <thead>
                 <tr>
-                    <th>ID</th>
+
                     <th>Imagem</th>
                     <th>Título</th>
                     <th>Duração</th>
@@ -24,7 +24,7 @@
             <tbody>
                 @foreach ($reg as $filme)
                     <tr>
-                        <td>{{$filme->id}}</td>
+
                         <td>
                             <!-- Adicionado para exibir a imagem -->
                             <img src="{{ asset('caminho/para/sua/imagem/' . $filme->imagem) }}" alt="Imagem Atual" class="img-thumbnail" width="108" height="192">            
