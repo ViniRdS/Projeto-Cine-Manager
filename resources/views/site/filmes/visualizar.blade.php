@@ -12,7 +12,7 @@
 
     <h2>{{$filme->titulo}}</h2>
     <br>
-    <img src="{{ asset('img/' . $filme->imagem) }}" alt="{{ $filme->titulo }}" width="270" height="480">
+    <img src="{{ asset('caminho/para/sua/imagem/' . $filme->imagem) }}" alt="Imagem Atual" class="img-thumbnail" width="108" height="192">            
     <br>
     {{$filme->descricao}}
     <br>
