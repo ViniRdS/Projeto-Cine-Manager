@@ -60,9 +60,11 @@ class FilmeController extends Controller
     /**
      * Display the specified resource.
      */
-    public function show(Filme $filme)
+    public function show(Filme $filme, $id)
     {
-        return view("site.filmes.visualizar");
+        $filme = Filme::find($id);
+        return view("site.filmes.visualizar",compact('filme'));
+        
     }
 
     /**
@@ -118,8 +120,9 @@ class FilmeController extends Controller
     /**
      * Remove the specified resource from storage.
      */
-    public function destroy(Filme $filme)
+    public function destroy($id)
     {
-        //
+        Filme::find($id)->delete();
+        return redirect()->route('filmes.listar');
     }
 }
