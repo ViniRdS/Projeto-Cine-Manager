@@ -18,7 +18,7 @@
         <div class="form-group">
             <label for="imagem">Imagem Atual</label>
             @if ($filme->imagem)
-            <img src="{{ asset('img/' . $filme->imagem) }}" alt="{{ $filme->titulo }}" width="108" height="192">
+            <img src="{{ asset('caminho/para/sua/imagem/' . $filme->imagem) }}" alt="Imagem Atual" class="img-thumbnail" width="108" height="192">           
             @else
                 <p>Nenhuma imagem disponível.</p>
             @endif
