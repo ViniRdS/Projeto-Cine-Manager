@@ -27,7 +27,7 @@
                         <td>{{$filme->id}}</td>
                         <td>
                             <!-- Adicionado para exibir a imagem -->
-                            <img src="{{ asset('caminho/para/sua/imagem/' . $filme->imagem) }}" alt="Imagem Atual" class="img-thumbnail">
+                            <img src="{{ asset('img/' . $filme->imagem) }}" alt="{{ $filme->titulo }}" width="108" height="192">
                         </td>
                         <td>{{$filme->titulo}}</td>
                         <td>{{$filme->duracao}}</td>
