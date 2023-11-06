@@ -43,7 +43,7 @@
 
         <div class="form-group">
             <label for="duracao">Duração (HH:MM)</label>
-            <input type="text" name="duracao" id="duracao" class="form-control" value="{{ $filme->duracao }}" required pattern="^([0-1][0-9]|2[0-3]):[0-5][0-9]$">
+            <input type="text" name="duracao" id="duracao" class="form-control" value="{{ substr($filme->duracao, 0, 5) }}" required pattern="^([0-1][0-9]|2[0-3]):[0-5][0-9]$">
             @error('duracao')
                 <span class="text-danger">{{ $message }}</span>
             @enderror

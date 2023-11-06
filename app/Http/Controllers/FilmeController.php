@@ -42,17 +42,18 @@ class FilmeController extends Controller
             'status' => 'required|in:0,1',
         ]);
     
-        // Manipulação da imagem, se presente
+        // Manipulação da imagem
         if ($request->hasFile('imagem')) {
-            $imageName = time() . '.' . $request->imagem->extension();  
-            $request->imagem->move(public_path('img'), $imageName);
+            $imageName = time() . '.' . $request->imagem->extension();
+            $request->imagem->move(public_path('caminho/para/sua/imagem/'), $imageName);
             $validatedData['imagem'] = $imageName; // Altera a chave 'imagem' para o nome do arquivo
         }
+        
     
         // Cria o filme com os dados validados
         Filme::create($validatedData);
     
-        // Redireciona para a lista de filmes com uma mensagem de sucesso
+        // Redireciona para a lista de filmes após o cadastro
         return redirect()->route('filmes.listar')->with('success', 'Filme cadastrado com sucesso!');
     }
     
@@ -60,12 +61,12 @@ class FilmeController extends Controller
     /**
      * Display the specified resource.
      */
-    public function show(Filme $filme, $id)
+    public function show($id)
     {
         $filme = Filme::find($id);
-        return view("site.filmes.visualizar",compact('filme'));
-        
+        return view('site.filmes.visualizar', compact('filme'));
     }
+    
 
     /**
      * Show the form for editing the specified resource.
