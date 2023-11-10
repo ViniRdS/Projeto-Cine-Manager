@@ -4,8 +4,6 @@
 
 @section('conteudo')
     <div class="container mt-4">
-        <h1>Cadastrar Filmes</h1>
-
         <form action="{{ route('filmes.salvar') }}" method="post" enctype="multipart/form-data">
             <div class="mb-3">
                 <label for="titulo" class="form-label">Título</label>

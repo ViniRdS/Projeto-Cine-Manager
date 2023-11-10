@@ -4,8 +4,6 @@
 
 @section('conteudo')
     <div class="container mt-4">
-        <h1>Visualizar Filme</h1>
-
         <div class="row justify-content-end">
             <a href="{{ route('filmes.listar') }}" class="btn btn-secondary">Voltar</a>
         </div>

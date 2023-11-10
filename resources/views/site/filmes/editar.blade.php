@@ -4,8 +4,6 @@
 
 @section('conteudo')
     <div class="container mt-4">
-        <h1>Editar Filmes</h1>
-
         <form action="{{ route('filmes.atualizar', ['id' => $filme->id]) }}" method="POST" enctype="multipart/form-data">    
 
             <div class="mb-3">

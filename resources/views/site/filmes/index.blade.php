@@ -4,14 +4,6 @@
 
 @section('conteudo')
     <div class="container mt-4">
-        <h1>Listar Filmes</h1>
-
-        <div class="row mb-3">
-            <div class="col-md-6">
-                <a href="{{ route('filmes.cadastrar') }}" class="btn btn-primary">Novo Filme</a>
-            </div>
-        </div>
-
         <div id="carrossel-filmes" class="carousel slide" data-bs-ride="carousel">
             <div class="carousel-inner">
                 @foreach ($reg as $key => $filme)
