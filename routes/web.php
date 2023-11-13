@@ -8,7 +8,6 @@ use App\Http\Controllers\LoginController;
 
 //Listar
 Route::get('/filmes', [FilmeController::class, 'index'])->name('filmes.listar');
-Route::get('/filmes2', [FilmeController::class, 'index2'])->name('filmes.listar2');
 //Cadastrar
 Route::get('/filmes/novo', [FilmeController::class, 'create'])->name('filmes.cadastrar');
 Route::post('/filmes/novo', [FilmeController::class, 'store'])->name('filmes.salvar');

@@ -1,13 +1,3 @@
-<style>/*Temporário*/
-.navbar {
-    max-height: 60px; /* Ajuste conforme necessário */
-}
-
-.navbar-h1 {
-    font-size: 1.5rem; /* Altere este valor conforme necessário para o tamanho desejado */
-}
-</style>
-
 <div>
     <nav class="navbar navbar-expand-lg bg-body-tertiary bg-dark" data-bs-theme="dark">
         <div class="container-fluid">
@@ -23,7 +13,7 @@
                         <a role="button" class="btn btn-secondary" href="{{ route('filmes.listar') }}">Filmes</a>
                     </li>
                     <li class="nav-item me-auto px-2">
-                        <a role="button" class="btn btn-primary" href="{{ route('filmes.cadastrar') }}">Novo Filme</a>
+                        <a role="button" class="btn btn-primary" id="btnNovoFilme" href="{{ route('filmes.cadastrar') }}">Novo Filme</a>
                     </li>
                 </ul>
     
@@ -32,11 +22,15 @@
                 </span>
     
                     <li class="nav-item ml-auto">
-                        <a role="button" class="btn btn btn-warning" href="{{ route('adm.cadastrar') }}">Cadastrar Administrador</a>
+                        <a role="button" class="btn btn btn-warning" id="btnNovoAdm" href="{{ route('adm.cadastrar') }}">Cadastrar Administrador</a>
                     </li>
 
                     <li class="nav-item ml-auto">
-                        <a role="button" class="btn btn-success" href="{{ route('adm.logar') }}">Entrar</a>
+                        <a role="button" class="btn btn-success" id="bntEntrar" href="{{ route('adm.logar') }}" style="display: none;">Entrar</a>
+                    </li>
+
+                    <li class="nav-item ml-auto">
+                        <a role="button" class="btn btn-danger" id="btnSair" href="#">Sair</a>
                     </li>
 
             </div>
