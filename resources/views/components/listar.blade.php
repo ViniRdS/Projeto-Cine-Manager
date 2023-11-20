@@ -17,13 +17,16 @@
             </div>
 
             <button class="carousel-control-prev" type="button" data-bs-target="#carrossel-filmes" data-bs-slide="prev">
-                <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+                <span class="carousel-control-prev-icon" aria-hidden="true" style="filter: invert(1);"></span>
                 <span class="visually-hidden">Anterior</span>
             </button>
             <button class="carousel-control-next" type="button" data-bs-target="#carrossel-filmes" data-bs-slide="next">
-                <span class="carousel-control-next-icon" aria-hidden="true"></span>
-                <span class="visually-hidden">Próximo</span>
+                <span class="carousel-control-next-icon" aria-hidden="true" style="filter: invert(1);"></span>
+                <span class="visually-hidden">Anterior</span>
+            </button>
             </button>
         </div>
     </div>
 </div>
+
+

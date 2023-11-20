@@ -22,11 +22,11 @@
                 </span>
     
                     <li class="nav-item ml-auto">
-                        <a role="button" class="btn btn btn-warning" id="btnNovoAdm" href="{{ route('adm.cadastrar') }}">Cadastrar Administrador</a>
+                    <a role="button" class="btn btn btn-warning" id="btnNovoAdm" href="{{ route('user.cadastrar') }}">Cadastrar Administrador</a>
                     </li>
 
                     <li class="nav-item ml-auto">
-                        <a role="button" class="btn btn-success" id="bntEntrar" href="{{ route('adm.logar') }}" style="display: none;">Entrar</a>
+                        <a role="button" class="btn btn-success" id="bntEntrar" href="{{ route('user.login') }}" style="display: none;">Entrar</a>
                     </li>
 
                     <li class="nav-item ml-auto">

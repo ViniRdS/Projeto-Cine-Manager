@@ -2,7 +2,7 @@
 
 use Illuminate\Support\Facades\Route;
 use App\Http\Controllers\FilmeController;
-use App\Http\Controllers\LoginController;
+use App\Http\Controllers\UserController;
 
 //Rotas do CRUD
 
@@ -18,9 +18,9 @@ Route::put('/filmes/edita/{id}', [FilmeController::class, 'update'])->name('film
 Route::get('/filmes/ver/{id}', [FilmeController::class, 'show'])->name('filmes.visualizar');
 //Remover
 Route::get('/filmes/delete/{id}', [FilmeController::class, 'destroy'])->name('filmes.remover');
+// login
+Route::get('/login', [UserController::class, 'showLoginForm'])->name('user.login');
+Route::post('/login', [UserController::class, 'login']);
 
-//Rotas do Login e Cadastro
-Route::get('/logar', [LoginController::class, 'index'])->name('adm.logar');
-
-Route::get('/cadastrar', [LoginController::class, 'create'])->name('adm.cadastrar');
-Route::post('/cadastrar', [LoginController::class, 'store'])->name('adm.salvar');
+Route::get('/cadastrar', [UserController::class, 'create'])->name('user.cadastrar');
+Route::post('/cadastrar', [UserController::class, 'store']);
