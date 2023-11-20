@@ -4,6 +4,7 @@ namespace App\Http\Controllers;
 
 use Illuminate\Http\Request;
 use Illuminate\Support\Facades\Hash;
+use Illuminate\Support\Facades\Auth;
 use App\Models\User;
 
 class UserController extends Controller
@@ -11,6 +12,12 @@ class UserController extends Controller
     /**
      * Show the form for creating a new resource.
      */
+
+    public function index()
+     {
+        return view('site.login.index');
+     }
+    
     public function create()
     {
         return view('site.login.cadastrar');
@@ -30,18 +37,24 @@ class UserController extends Controller
             'password' => Hash::make($request->password),
         ]);
     
-        return redirect()->route('user.login')->with('success', 'Usuário cadastrado com sucesso!');
+        return redirect()->route('user.index')->with('success', 'Usuário cadastrado com sucesso!');
     }
-    
 
+    public function login(Request $request)
+    {
+        $credenciais = $request->only('username', 'password');
+        if(Auth::attempt($credenciais)){
+            return redirect()->route('filmes.listar');
+        }else{
+            session()->flash('error', 'Credenciais inválidas');
+            return redirect()->route('user.index');
+        }
+    
+    }
 
     /**
      * Display the specified resource.
      */
-    public function showLoginForm()
-    {
-        return view('site.login.index');
-    }
 
     /**
      * Show the form for editing the specified resource.
@@ -62,8 +75,9 @@ class UserController extends Controller
     /**
      * Remove the specified resource from storage.
      */
-    public function destroy(string $id)
+    public function destroy()
     {
-        // Implemente a lógica para excluir um usuário, se necessário.
+        Auth::logout();
+        return redirect()->route('user.index');
     }
 }

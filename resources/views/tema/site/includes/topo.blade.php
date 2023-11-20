@@ -8,9 +8,12 @@
     <!-- Bootstrap via CDN -->
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/css/bootstrap.min.css" rel="stylesheet">
     <link href="/css/app.css" rel="stylesheet" type="text/css" />
-    
     <!-- Component do Menu -->
+    @auth
+    <x-navbar-adm/>
+    @else
     <x-navbar/>
+    @endauth
 </head>
 
 <body>

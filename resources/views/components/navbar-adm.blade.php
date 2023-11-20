@@ -12,13 +12,22 @@
                     <li class="nav-item me-auto px-2">
                         <a role="button" class="btn btn-secondary" href="{{ route('filmes.listar') }}">Filmes</a>
                     </li>
+                    <li class="nav-item me-auto px-2">
+                        <a role="button" class="btn btn-primary" id="btnNovoFilme" href="{{ route('filmes.cadastrar') }}">Novo Filme</a>
+                    </li>
                 </ul>
     
                 <span class="navbar-text text-white mx-auto">
                     <h1 navbar-text text-white mx-auto navbar-h1>@yield('titulo')</h1>
                 </span>
+    
                     <li class="nav-item ml-auto">
-                        <a role="button" class="btn btn-success" id="bntEntrar" href="{{ route('user.index') }}">Entrar</a>
+                    <a role="button" class="btn btn btn-warning" id="btnNovoAdm" href="{{ route('user.cadastrar') }}">Cadastrar Administrador</a>
+                    </li>
+
+                    
+                    <li class="nav-item ml-auto">
+                        <a role="button" class="btn btn-danger" id="btnSair" href="{{ route('user.logout') }}">Sair</a>
                     </li>
 
             </div>
