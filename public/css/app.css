@@ -6,7 +6,17 @@
     font-size: 1.5rem; /* Altere este valor conforme necessário para o tamanho desejado */
 }
 
+body{
+    background-color:whitesmoke;
+}
 
 .celulaFilme{
     padding: 2em;
 }
+
+.slick-prev:before {
+    color: blue;
+  }
+  .slick-next:before {
+    color: black;
+  }
