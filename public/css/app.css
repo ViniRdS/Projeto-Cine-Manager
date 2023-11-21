@@ -15,7 +15,7 @@ body{
 }
 
 .slick-prev:before {
-    color: blue;
+    color: black;
   }
   .slick-next:before {
     color: black;
