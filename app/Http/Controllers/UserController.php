@@ -49,7 +49,6 @@ class UserController extends Controller
             session()->flash('error', 'Credenciais inválidas');
             return redirect()->route('user.index');
         }
-    
     }
 
     /**

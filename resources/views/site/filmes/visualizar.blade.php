@@ -12,10 +12,10 @@
             <h2>{{ $filme->titulo }}</h2>
             <br>
 
-            <img src="{{ asset('caminho/para/sua/imagem/' . $filme->imagem) }}" alt="Imagem Atual" class="img-thumbnail" width="108" height="192">
+            <img src="{{ asset('caminho/para/sua/imagem/' . $filme->imagem) }}" alt="Imagem Atual" class="img-thumbnail" width="324" height="576">
             <br>
 
-            <p>{{ $filme->descricao }}</p>
+            <p><strong>Sinopse:</strong> {{ $filme->descricao }}</p>
             <p><strong>Duração:</strong> {{ $filme->duracao }}</p>
             <p><strong>Gênero:</strong> {{ $filme->genero }}</p>
             <p><strong>Diretor:</strong> {{ $filme->diretor }}</p>
