@@ -7,7 +7,7 @@
                             <div class="infos mx-auto text-center">
                                 <h5>{{ $filme->titulo }}</h5>
                                 <div class="btn-group mt-2" role="group" aria-label="Botões de Ação">
-                                    <a href="{{ route('filmes.visualizar', $filme->id) }}" class="btn btn-info btn-sm">Visualizar</a>
+                                    <a href="{{ route('filmes.visualizar', $filme->id) }}" class="btn btn-info btn-sm"><i class="bi bi-eye-fill"></i>Visualizar</a>
                                 </div>  
                             </div>
                     </div>

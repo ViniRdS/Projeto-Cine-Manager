@@ -22,10 +22,10 @@
 
                             <h5>{{ $filme->titulo }}</h5>
                             <!-- Adicione mais informações se necessário -->
-                            <div class="btn-group mt-2" role="group" aria-label="Botões de Ação">
-                                <a href="{{ route('filmes.visualizar', $filme->id) }}" class="btn btn-info btn-sm">Visualizar</a>
-                                <a href="{{ route('filmes.editar', $filme->id) }}" class="btn btn-warning btn-sm">Editar</a>
-                                <a href="{{ route('filmes.remover', $filme->id) }}" class="btn btn-danger btn-sm">Remover</a>
+                            <div class="btn-group mt-2" role="group" aria-label="Botões de Ação" style="width: 100%">
+                                <a href="{{ route('filmes.visualizar', $filme->id) }}" class="btn btn-info btn-sm" ><i class="bi bi-eye-fill"></i></a>
+                                <a href="{{ route('filmes.editar', $filme->id) }}" class="btn btn-warning btn-sm"><i class="bi bi-pencil-square"></i></a>
+                                <a href="{{ route('filmes.remover', $filme->id) }}" class="btn btn-danger btn-sm"><i class="bi bi-trash-fill"></i></a>
                             </div>
                 </td>
             @endforeach
