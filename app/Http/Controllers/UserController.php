@@ -36,8 +36,8 @@ class UserController extends Controller
             'username' => $request->username,
             'password' => Hash::make($request->password),
         ]);
-    
-        return redirect()->route('user.cadastrar')->with('success', 'Usuário cadastrado com sucesso!');
+        $request->session()->flash('alert-success', 'Usuário cadastrado com sucesso!');
+        return redirect()->route('user.cadastrar');
     }
 
     public function login(Request $request)
@@ -46,7 +46,7 @@ class UserController extends Controller
         if(Auth::attempt($credenciais)){
             return redirect()->route('filmes.listar');
         }else{
-            session()->flash('error', 'Credenciais inválidas');
+            $request->session()->flash('alert-danger', 'Credenciais inválidas!');
             return redirect()->route('user.index');
         }
     }

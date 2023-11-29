@@ -12,6 +12,10 @@ $('.filmes').slick({
     autoplay: true,
     autoplaySpeed: 5000,
 });
+
+setTimeout(function(){
+    $("#idMsg").remove();
+}, 3000 );
 </script>
 
 

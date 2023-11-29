@@ -11,10 +11,6 @@
         <div class="row mt-3">
             <div class="col-md-6">
                 <img src="{{ asset('caminho/para/sua/imagem/' . $filme->imagem) }}" alt="Imagem Atual" class="img-thumbnail" width="648" height="1152">
-                
-                <div class="border rounded p-3 mt-3">
-                    <p><strong>Status:</strong> {{ ($filme->status) ? 'Em Cartaz' : 'Em Breve' }}</p>
-                </div>
             </div>
 
             <div class="col-md-6">
@@ -36,6 +32,10 @@
 
                 <div class="border rounded p-3 mb-3">
                     <p><strong>Diretor:</strong> {{ $filme->diretor }}</p>
+                </div>
+
+                <div class="border rounded p-3 mt-3">
+                    <p><strong>Status:</strong> {{ ($filme->status) ? 'Em Cartaz' : 'Em Breve' }}</p>
                 </div>
             </div>
         </div>

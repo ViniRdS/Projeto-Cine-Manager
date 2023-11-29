@@ -6,7 +6,7 @@
 
 
 <div id = "boxes">
-    <div id = "leftbox"></div> 
+    <div id = "leftbox"><img src="/img/CineManagerLogin.png" id="imgLogin"></div> 
     <div id = "rightbox">
         <section class="vh-100">
             <div class="container-fluid h-custom">

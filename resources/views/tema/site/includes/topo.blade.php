@@ -27,3 +27,10 @@
 </head>
 
 <body>
+    @foreach (['danger', 'warning', 'success', 'info'] as $msg)
+    @if(Session::has('alert-' . $msg))
+        <div class="alert alert-{{ $msg }} close" role="alert" id="idMsg">
+            {!! Session::get('alert-' . $msg) !!}
+        </div>
+    @endif
+    @endforeach

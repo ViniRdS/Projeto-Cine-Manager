@@ -42,18 +42,22 @@ footer{
 
 #leftbox {
     float:left; 
-    background:rgb(255, 255, 255);
-    background-image:url("/img/CineImgLogin2.png");
-    background-size: cover;
-    width:60%;
-    height:600px;
+    width: 60%;
+}
+
+#imgLogin{
+    background-size: contain;
+    background-repeat: no-repeat;
+    width: 100%;
+    height: 100vh;
+    
 }
 
 #rightbox{
     float:right;
     background: #4c56c0;
     width:40%;
-    height: 600px;
+    height: 100%;
 }
 
       
