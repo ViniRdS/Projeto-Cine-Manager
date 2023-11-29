@@ -4,6 +4,7 @@
 
 @section('conteudo')
     <div class="container mt-4">
+        <div class="border rounded p-3 mb-3">
         <form action="{{ route('filmes.atualizar', ['id' => $filme->id]) }}" method="POST" enctype="multipart/form-data">
             <div class="row">
                 <div class="col-md-6">
@@ -92,5 +93,6 @@
             {{ csrf_field() }}
             <input type="hidden" name="_method" value="put">
         </form>
+        </div>
     </div>
 @endsection

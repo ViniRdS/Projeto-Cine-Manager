@@ -4,10 +4,6 @@
 
 @section('conteudo')
     <div class="container mt-4">
-        <div class="row justify-content-end">
-            <a href="{{ route('filmes.listar') }}" class="btn btn-secondary">Voltar</a>
-        </div>
-
         <div class="row mt-3">
             <div class="col-md-6">
                 <img src="{{ asset('caminho/para/sua/imagem/' . $filme->imagem) }}" alt="Imagem Atual" class="img-thumbnail" width="648" height="1152">

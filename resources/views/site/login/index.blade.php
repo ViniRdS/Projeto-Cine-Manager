@@ -30,7 +30,7 @@
                     <!-- Senha -->
                     <label style="color: white">Senha</label>
                     <div class="form-outline mb-3 input-group">
-                    <span class="input-group-text"><i class="bi bi-lock-fill"></i></span>
+                    <span class="input-group-text"><i class="bi bi-key-fill"></i></span>
                       <input type="password" name="password" id="password" class="form-control form-control-lg"
                         placeholder="Digite sua Senha" required>
                     </div>

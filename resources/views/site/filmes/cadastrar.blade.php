@@ -4,6 +4,7 @@
 
 @section('conteudo')
     <div class="container mt-4">
+        <div class="border rounded p-3 mb-3">
         <form action="{{ route('filmes.salvar') }}" method="post" enctype="multipart/form-data">
             <div class="row">
                 <div class="col-md-6">
@@ -82,5 +83,6 @@
 
             {{ csrf_field() }}
         </form>
+    </div>
     </div>
 @endsection
